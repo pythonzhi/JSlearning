@@ -17,17 +17,19 @@ window.onload = function(){
         topbar.className = 'top' + ' topbar'
     }
     window.onscroll = function(){
-    console.log( document.documentElement.scrollTop )
-    let num = document.documentElement.scrollTop
-    if(num > 700){
-        topbar.className = 'top' + ' topbar'
-    }else if (num > 3918){
-        pic1.className = pic1.dataset.name;
-        pic3.className = pic3.dataset.name;
-    } else{
-        topbar.className = 'topbar'
-        pic1.className = pic1.dataset.name + ' init';
-        pic3.className = pic3.dataset.name + ' init';
+        console.log( document.documentElement.scrollTop )
+        let num = document.documentElement.scrollTop
+        if(num > 700){
+            topbar.className = 'top' + ' topbar'
+        }else{
+            topbar.className = 'topbar'
+        }
+        if (num > 3491){
+            pic1.classList.remove('init');
+            pic3.classList.remove('init');
+        } else{
+            pic1.className = pic1.dataset.name + ' init';
+            pic3.className = pic3.dataset.name + ' init';
     }
 
     // js的属性名中不允许出现-，因此使用驼峰式命名法

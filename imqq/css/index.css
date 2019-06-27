@@ -361,8 +361,8 @@ a{
     width: 150px;
     height: 150px;
 }
-.blogwrap div:hover{
-    transform: rotate(360deg);
+.blogwrap div{
+    transition: 0.6s;
 }
 .blogimg .pic1{
     left: -122px;
