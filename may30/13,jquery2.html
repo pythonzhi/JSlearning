@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    h2::before {
+      content: "★";
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+<div class="box">div.box</div>
+
+<ul>
+  <li>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </li>
+  <li></li>
+  <li class="focus"></li>
+  <li></li>
+  <li>这是另一段文字</li>
+</ul>
+
+<div class="wrap">
+  <h2>这是一个标题</h2>
+  <p>这是第一段文字</p>
+  <p></p>
+  <p>这是第二段文字</p>
+  <p></p>
+  <p>这是第三段文字</p>
+</div>
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+
+// 1, 选中第一个ul下的所有子元素li标签，添加一个红色边框
+// $('ul:first > li').css({'border': '1px solid red'});
+
+// 2，选中ul下class不为focus的所有li
+// $('ul li:not(.focus)').css('border','1px solid blue');
+
+// 3, 选中所有空的p标签，并且添加一个绿色背景
+// $('p:empty').css({background: 'blue',border: '1px solid orange'})
+
+// 4，用一个span标签将 .wrap 下的h2标签中的内容包裹一下
+// <h2><span>这是一个标题</span></h2>
+// $('.wrap h2').wrapInner('<span style="background: purple;"></span>');
+
+// $('p:contains("文字")').css('color','red');
+
+// 扩展插件
+// 文档处理中的each
+// $('li').each(function(index,ele){
+//   alert($(this).html());
+// })
+
+// var arr = [1,2,3,4];
+
+// $.each(arr,function(index,val){
+//   alert(val);
+// })
+
+// $.extend();
+
+// 给JQ扩展新的工具方法
+// $.extend({
+//   sayHello: function(){
+//     alert('hello world！');
+//   }
+// });
+
+// 给jq扩展一个 sayHello() 方法
+// $.sayHello();
+
+
+// 给JQ的DOM对象扩展新方法
+$.fn.extend({
+  getFirstChar: function(){
+    // 这个函数里面可以直接使用jq已经有的所有属性和方法
+    // alert( $(this).text().charAt() );
+  }
+});
+// $.fn.extand();
+
+$('h2').getFirstChar();
+
+
+// sizzle.js jq的选择器单独文件
+</script>
+
+
+</body>
+</html>

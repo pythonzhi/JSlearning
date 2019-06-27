@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+
+var num = 10;
+
+// 大部分值都可以通过 .toString() 转换成字符串
+// console.log( num.toString() );
+
+// console.log( (12).toString() );
+// console.log( (true).toString() );
+
+// undefined 和 null 只能通过 String() 来转换成字符串
+// console.log( (undefined).toString() );
+// console.log( String(undefined), undefined );
+// console.log( String(null), null );
+
+// 其它类型的值转换成布尔值
+// console.log( Boolean('') ); ///false
+// console.log( Boolean(123) ); //true
+// console.log( Boolean(0) ); //false
+// console.log( Boolean({}) ); //true
+// console.log( Boolean([]) ); //true
+
+// 其它类型转换成数字
+var str = '12.99';
+var str1 = '12.50元';
+var str2 = '单价:10元';
+var str3 = '123abc456';
+var str4 = 'abc456';
+// console.log( str, 12.34 );
+// console.log( parseInt(str) );
+// console.log( parseFloat(str) );
+// console.log( Number(str) );
+// console.log( Number(str1) );
+// console.log( parseInt(str1) );
+// console.log( parseFloat(str1) );
+// console.log( parseFloat(str2) );
+// console.log( parseFloat(str3) );
+console.log( parseFloat(str4) );
+
+/*
+  parseInt() / parseFloat() : 
+    1, 如果字符串的开始位置数字，直接返回NaN.
+    2，从左往右一个一个提取数字，碰到不是数字的字符就停止不再往后提取。
+
+  Number()
+    1, 只要字符串中有不是数字的字符，就直接返回 NaN.\
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .div1 {
+      width: 200px;
+      height: 100px;
+      background: red;
+      /* margin: 50px auto 0; */
+      position: relative;
+      left: 300px;
+      top: 100px;
+      transition: width 1s, height 1s 1s;
+      /* animation: move 3s infinite; */
+    }
+    /* .div1:hover {
+      width: 800px;
+      height: 500px;
+    } */
+
+    @keyframes move {
+      25% {
+        width: 800px;
+        height: 100px;
+      }
+      50% {
+        width: 800px;
+        height: 500px;
+      }
+      75% {
+        width: 200px;
+        height: 500px;
+      }
+      100% {
+        width: 200px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="div1"></div>
+
+  <script src="js/jquery-3.4.1.js"></script>
+  <script>
+  
+    $('.div1').hover(function(){
+      $(this).animate({width: 800},150).animate({height: 500},150);
+    },function(){
+      $(this).animate({width: 200},150).animate({height: 100},150);
+    });
+  
+  </script>
+
+</body>
+</html>

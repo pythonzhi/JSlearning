@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<h2>ajax同源策略11</h2>  
+
+<!-- <div>fdsafas</DIV> -->
+
+<script>
+
+/*
+  同源策略：
+    两个资源之间 主机  端口  协议  三者必须都是相同的，称为同源
+    否则是不同源的
+
+    同源策略只看访问方式
+
+  localhost  域名        qq.com   163.com
+
+  favicon.ico 与 1,ajax.html 不同源
+  http://localhost:80/favicon.ico
+  http://127.0.0.1:80/1,ajax.html
+
+
+  127.0.0.1  本机IP地址
+
+  // 10.211.55.39 / 192.168.0.1  局域网IP
+
+  访问一个网站
+    既可以使用域名的方式，也可以使用IP的方式 
+
+
+  ajax 只能访问同源下的资源  （浏览器的安全限制）
+
+
+  向后端请求数据，需要知道什么？
+
+    1，请求地址？
+    2，以什么方式请求？
+    3，什么时候请求是成功的？
+    4，请求成功之后应该怎么处理数据？数据在哪？
+
+*/
+
+// url     method     onload     ajax对象
+
+// ajax    Asynchronous javascript and xml
+
+
+// ajax请求流程（步骤） 
+// 1, 创建ajax对象（通过ajax对象发起请求的申请）
+var xhr = new XMLHttpRequest();
+
+// 2, 配置请求参数    1，请求的地址 2，请求方式  
+// xhr.open('get','test1.txt'); //准备通过url建立链接请求
+xhr.open('get','test.txt'); //准备通过url建立链接请求
+
+// 4，处理请求之后的数据
+  // 不论请求最终是成功还是失败，请求的结果都会保存到 XMLHttpRequest 对象中
+
+  // a, 成功  onload 事件会被触发
+xhr.onload = function(){
+  // console.log( xhr, 'onload');
+  // xhr.responseText
+};
+
+// 3. 发送请求
+xhr.send(null); //get请求，send不需要参数
+
+</script>
+
+</body>
+</html>

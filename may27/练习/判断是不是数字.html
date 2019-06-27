@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+<input type="text" id="txt">
+<input type="button" id="btn" value="检测">
+
+<script>
+
+var oBtn = document.getElementById('btn');
+var oTxt = document.getElementById('txt');
+
+oBtn.onclick = function () {
+
+  var val = oTxt.value;
+
+  // JS从文本框中获取到的任何值都是字符串类型
+  // parseInt parseFloat Number  NaN  isNaN
+  console.log( typeof val );
+
+  /*
+  
+  扩展：
+
+    1，判断是不是整数？
+    
+    2，判断是不是偶数？
+
+    3，判断是不是奇数？
+
+    4，判断是不是小数？
+  
+  */ 
+
+
+};
+
+
+</script>
+
+
+</body>
+</html>

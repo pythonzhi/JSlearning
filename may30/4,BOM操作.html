@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+
+    // 当页面中的所有资源加载完成之后，自动触发的事件
+    // window.onload = function(){
+    //   var div1 = document.getElementById('div1');
+
+    //   alert(div1);
+
+    //   div1.onclick = function(){
+
+    //   };  
+
+    //   console.log( window );
+
+    // };
+
+    
+
+
+  </script>
+</head>
+<body>
+  <div id="div1"></div>
+
+
+  <script>
+
+    // IE8下的问题 必须在window.onload中获取页面元素
+    window.onload = function(){
+
+      document.onclick = function(){
+        alert(123);
+      };
+
+    }
+    
+  </script>
+</body>
+</html>

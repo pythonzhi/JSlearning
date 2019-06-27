@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .div1 {
+      width: 200px;
+      height: 200px;
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="div1" data-id='132313213' data-sm-sn='1319024'></div>
+
+  <script>
+    
+    // data-id='132313213'
+    var oDiv = document.querySelector('.div1');
+
+    // oDiv.dataset.id = '132313213';
+
+    // alert( oDiv.dataset.id );
+    // js的属性名不允许有- 
+    // 如果需要使用'-'，必须使用驼峰式命名规则
+    // alert( oDiv.dataset.sm-sn );
+    // alert( oDiv.dataset.smSn );
+
+    // alert( oDiv.getAttribute('data-id') );
+    // alert( oDiv.getAttribute('class') ); //标准属性不需要使用这个方法 
+  
+  </script>
+
+</body>
+</html>

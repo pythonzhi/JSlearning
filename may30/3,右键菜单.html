@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .menu {
+      width: 80px;
+      border: 1px solid #888;
+      padding: 10px;
+      line-height: 1.75;
+      background: #efefef;
+      display: none;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  
+<p>PingWest品玩5月30日讯，据TechCrunch消息，亚马逊发布了一台5.5英寸的新款Echo Show，标价90美元，配备可选的20美元的磁性支架，用于调整摄像头角度。新款Echo Show即日开始预购，6月份开始发货。</p>
+
+<div class="menu">
+  你的鼠标右键坏了！该换鼠标了
+</div>
+
+<script>
+
+document.onmousedown = function(){
+  // 取消鼠标按下的事件默认行为，页面文字将不能被拖选
+  return false;
+};
+
+// 键盘事件：onkeydown  判断按的是哪一个键 ev.keyCode   ev.ctrlKey
+// A   ev.keyCode 65
+
+// 右键上下文菜单
+// document.onclick = function(ev){
+document.oncontextmenu = function(ev){
+
+  // console.log(ev);
+
+  var menu = document.querySelector('.menu');
+
+  menu.style.left = ev.clientX + 'px';
+  menu.style.top = ev.clientY + 'px';
+
+  menu.style.display = 'block';
+
+  setTimeout(function(){
+    menu.style.display = 'none';
+  },2000);
+  
+  // 取消事件的默认行为
+  return false;
+};
+
+
+</script>
+  
+</body>
+</html>

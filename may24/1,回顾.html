@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        [class] {
+            color: red;
+        }
+        li {
+            /* list-style-type:georgian; */
+            list-style: none;
+        }
+        /* 选中属性为class，值为focus或者以focus-开头的标签 */
+        [class|=focus] {
+            font-size: 80px;
+        }
+        a {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="div1">这是一个div标签</div>
+<!-- emmet语法  -->
+<ul>
+    <li>1111</li>
+    <li>22222</li>
+    <li class="focus">3333</li>
+    <li>4444</li>
+    <li>5555</li>
+</ul>
+<p class="txt focus">这是p标签</p>
+<span>这是一个span</span>
+
+<a href="https://www.baidu.com/">百度一下</a>
+
+</body>
+</html>

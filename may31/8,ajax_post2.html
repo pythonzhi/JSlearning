@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<h2>上传文件</h2> 
+
+<!-- <form id="fm1" action="ajax_upload.php" method="post" enctype="multipart/form-data"> -->
+<form id="fm1">
+  <input type="file" name="upload">
+  <input type="button" id="btn" value="上传">
+  <!-- <input type="submit" name="submit" id="btn" value="上传"> -->
+</form>
+
+<script>
+
+/*
+上传文件 
+
+同源下请求数据
+
+*/
+
+var btn = document.getElementById('btn');
+var fm1 = document.getElementById('fm1');
+
+btn.onclick = function() {
+
+  // console.log( fm1.upload.files )
+  // 将文件包装成form对象
+  var data = new FormData();
+
+  data.append('upload',fm1.upload.files[0]);
+
+  var url = 'ajax_upload.php';
+  var xhr = new XMLHttpRequest();
+
+  xhr.open('post',url);
+
+  xhr.onload = function(){
+    // console.log( xhr );
+    console.log( xhr.responseText );
+
+  };
+
+  // post方式提交，要设置http请求头来标识提交的数据类型
+  // xhr.setRequestHeader(
+  //   'Content-Type',
+  //   // url参数
+  //   // 'application/x-www-form-urlencoded; boundary=AaB03x'
+  //   // 二进制数据提交
+  //   'multipart/form-data'
+  // );
+
+  // xhr.send(null);
+  xhr.send(data);  
+
+}
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 100px; 
+            padding: 50px;
+            /* position: relative; */
+            border: 5px solid #000;
+            height: 3000px;
+            width: 3000px;
+        }
+        .box {
+            /* position: sticky; */
+        }
+        .box div {
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .div1 {
+            background: red;
+        }
+        .div2 {
+            background: green;
+            /* position: relative; */
+            /* position: absolute; */
+            /* position: fixed; */
+            left: 0px;
+            top: 10px;
+            /* left: 0;
+            top: 0; */
+        }
+        /* 勾股定理 */
+        .div3 {
+            background: blue;
+        }
+
+        .pop {
+            width: 100px;
+            height: 100px;
+            background: purple;
+            /* position: relative; */
+            position: sticky;
+            /* left: 100px; */
+            top: 100px;
+        }
+
+        /* 
+            相对定位：relative
+                1,不脱离文档流，占的是原来的位置（没有设置定位时的位置）
+                2,相对自己原来的位置进行偏移，原点是左上角
+
+            绝对定位：absolute
+                1，脱离文档流
+                2，如果没有设置定位父级，默认是以document为定位原点
+                3，如果当前元素的祖先元素有定位属性（relative/absolute/fixed/sticky）,
+                以最近的有定位属性的祖先元素作为定位原点
+            
+            固定定位：fixed
+                1，脱离文档流
+                2，相对浏览器窗口左上角定位
+
+            粘性定位：sticky
+                1，不脱离文档流
+                2，当滚动条的滚动高度大于当前元素的top值时，
+                    当前元素为relative效果.
+                    当滚动条的滚动高度小于当前元素的top时，
+                    当前元素为fixed效果。
+                注意：
+                    不论是在relative效果状态还是在fixed效果
+                    状态，元素本身始终不脱离文档流
+
+            初始值：static 表示元素不设置定位属性
+        */
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <br clear="all">
+    </div>
+    <p>fdsfafdsafsdaflfjldsajfladsf</p>
+    <div class="pop" id="pop"></div>
+    <p>123213213213131313</p>
+
+    <!-- <iframe src="https://www.baidu.com/"></iframe> -->
+
+    <script>
+    
+        // window.onscroll = function(){
+
+        //     if( document.documentElement.scrollTop > 200)
+        //         pop.style.position = "fixed";
+        //     else
+        //         pop.style.position = 'relative';
+
+        // }
+    
+    </script>
+
+</body>
+</html>

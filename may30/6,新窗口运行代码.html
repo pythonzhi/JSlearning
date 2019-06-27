@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    iframe {width: 100%;}
+  </style>
+</head>
+<body>
+  
+<textarea id="code"></textarea>
+<input type="button" value="运行" id="btn">
+
+<div>
+  <a href="">下载地址</a>
+  <span></span>
+</div>
+
+<iframe name="fm1" src="1.html"></iframe>
+
+<script>
+
+window.onload = function(){
+
+document.onclick = function(){
+  // window.open('');
+
+  // 第一个参数：指定要打开的页面地址
+  // window.open('https://www.baidu.com/');
+
+  // 第二个参数：指定在哪一个窗口中打开页面
+  // _blank 新窗口   _self 当前窗口   _top 顶层   _parent 父级窗口中打开   name 指定的iframe框架中打开
+  // window.open('https://www.baidu.com/','_self');
+  // window.open('https://www.baidu.com/','fm1')
+
+  // 第三个参数：配置新窗口的窗口特征（宽高尺寸，是否有工具条等，每个浏览器可以配置的属性不尽相同）
+  // 这个参数只有在第二个参数为 _blank 时才会生效。
+  // window.open('https://www.baidu.com/','','width=300,height=400,resizable=1')
+
+  window.open('7,demo.html');
+
+};
+
+// window.open('');
+
+};
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<h2>ajax同源策略11</h2>  
+
+<script>
+
+/*
+HTML : 数据展示
+XML  ：数据存储
+*/
+
+
+var xhr = new XMLHttpRequest();
+
+// xhr.open('get','test.txt');
+xhr.open('get','demo.xml');
+
+xhr.onload = function(){
+
+  // console.log( xhr );
+  var doc = xhr.responseXML;
+  var names = doc.getElementsByTagName('name');
+
+  // console.log( doc );
+  // console.log( names );
+  console.log( names[0].innerHTML );
+
+};
+
+xhr.send(null);
+
+</script>
+
+</body>
+</html>

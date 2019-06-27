@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> 2D变换 </title>
+  <style>
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background: red;
+      font-size: 30px;
+      font-weight: bolder;
+      /* transform: scaleX(0.2); */
+      transform: scale(1,1);
+      animation: heart .6s infinite;
+    }
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background: blue;
+    }
+
+    @keyframes heart {
+      from {
+        transform: scale(1,1);
+      }
+      50% {
+        transform: scale(0.5,0.5);
+      }
+      to {
+        transform: scale(1,1)
+      }
+    }
+    /*
+      transform:
+        1, 元素是不脱离文档流的
+        2，元素层级会比正常文档流中的元素层级高
+        3，相对于自己原来的位置进行偏移
+    */
+  </style>
+</head>
+<body>
+  
+  <div class="box1">你好，世界！</div>
+  <div class="box2"></div>
+
+</body>
+</html>

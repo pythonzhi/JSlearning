@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div>fdsaffaf</div>
+  
+<script>
+
+window.onload = function(){
+
+  // document.onclick = function(ev){
+  document.onkeydown = function(ev){
+
+    var ev = ev || event;
+    // alert(123)
+    // alert( ev.clientX );
+    // alert( event.clientX );
+    // console.log(ev);
+
+    // ev.keyCode :  跟键盘按钮字符对应的字符编码  ascii码
+
+    // ev.target : 事件源（触发事件的标签）
+    // IE下事件源： ev.srcElement
+
+    /*
+    键盘ascii码对应
+      A-Z 65 ~ 90
+      空格    32
+      退格（删除） 8
+      回车    13
+
+      数字键   0~9   48~57
+
+      方向键
+        上  37
+        右  38
+        下  39
+        左  40
+    
+    */
+
+
+  };
+
+};
+
+function fn1(a){
+  // 定义了形参而没有传实参，形参的默认值为undefined
+  alert(a);
+}
+
+// fn1();
+
+/*
+事件对象： 当事件触发时，浏览器临时自动创建的一个对象，对象中保存了所有事件相关的详细信息
+  事件发生时的类型（鼠标还是键盘事件），事件发生在哪个元素身上等
+
+在标准浏览器下，事件对象是作为事件处理函数的第一个参数自动传入。
+
+在IE8以下浏览器，事件对象是全局对象event。
+
+*/ 
+
+
+</script>
+
+</body>
+</html>

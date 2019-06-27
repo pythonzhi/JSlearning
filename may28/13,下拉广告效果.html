@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .topBar {
+      width: 960px;
+      height: 80px;
+      margin: 0 auto 15px;
+      background: orange;
+    }
+    .container {
+      height: 600px;
+      width: 960px;
+      background: pink;
+      margin: 0 auto;
+    }
+
+    .ad {
+      width: 960px;
+      height: 0px;
+      background: red;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  
+<div class="topBar"></div>
+
+<div class="ad" id="ad"></div>
+
+<div class="container"></div>
+
+<script>
+
+var ad = document.getElementById('ad');
+var ih = 0, timer;
+
+setTimeout(function(){
+
+  timer = setInterval(function(){
+    ih ++;
+    if ( ih >= 150 ) {
+      ih = 150;
+      clearInterval(timer);
+
+      setTimeout(function(){
+
+        timer = setInterval(function(){
+          ih --;
+          if (ih <=0 ) {
+            ih = 0;
+            clearInterval(timer);
+          } 
+          ad.style.height = ih + 'px';
+        },15);
+
+      },3000);
+
+    }
+    ad.style.height = ih + 'px';
+  },20);
+
+}, 2000);
+
+
+</script>
+
+</body>
+</html>

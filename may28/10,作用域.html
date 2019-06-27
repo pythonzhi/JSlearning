@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+/*
+预解析机制：
+  把所有的变量声明和函数定义提到当前作用域的最前面提前解析。
+
+作用域： 
+  变量或函数的有效作用范围
+
+  作用域是函数内部与外部之间
+
+  当访问一个变量或调用一个函数时，会优先在当前作用域或最近的作用域
+    中查找这个变量或函数，如果找到了就用找到的变量或函数，如果没有找到
+    就去上一层作用域查找，直到找到最外层（script标签），如果还没找到，
+    就执行出错。
+*/
+
+
+var a = 10;
+
+function fn1(){
+  var a;
+  alert(a); //undefined
+  a = 20;
+}
+// fn1();
+
+// alert(a); //10
+
+function fn2() {
+  var b = 20;
+
+  function fn3(){
+    var c = 30;
+    alert(b); //20
+  }
+  fn3();
+  alert(c); //not defiend
+}
+fn2();
+
+</script>
+
+
+</body>
+</html>

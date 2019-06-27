@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 复合样式: 里面包含了多个样式 */
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: red;
+            /* 所有属性都有过渡动画，动画形式为ease，持续时间为0.5s */
+            transition: .5s;
+            /* 规定执行过渡动画的属性 */
+            /* transition-property: width; */
+            /* 规定过渡动画在多长时间内执行完 */
+            /* transition-duration: 2s; */
+            transition-duration: 500ms;
+            /* 设置过渡动画的效果 */
+            transition-timing-function: linear;
+            /* transition-timing-function: ease-in; */
+            /* transition-timing-function: ease-in-out; */
+            /* transition-timing-function: cubic-bezier(0.81, -0.39, 0.09, 1.13); */
+            /* 规定动画在延迟一段时间之后再执行 */
+            transition-delay: 1.5s;
+            opacity: 1;
+            position: relative;
+            left: 0px;
+        }
+        body:hover .box {
+            /* width: 800px; */
+            /* opacity: 0.3; */
+            left: 600px;
+        }
+        /* 过渡动画需要有一个触发动画的条件（主动触发） */
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

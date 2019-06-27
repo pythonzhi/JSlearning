@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #div1 {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <input type="button" value="确定" id="btn" />
+  <div id="div1"></div>
+
+  <script>
+    var oDiv1 = document.getElementById('div1');
+    var oBtn = document.getElementById('btn');
+    var arr = [];
+
+    oBtn.onclick = function(){
+
+      // arr.forEach(function(v,i){
+      //   var num = arr.length - 1 - i;
+      //   oDiv1.style.left = arr[num].x + 'px';
+      //   oDiv1.style.top = arr[num].y + 'px';
+      // });
+
+      var index = arr.length - 1;
+
+      var timer = setInterval(function(){
+        oDiv1.style.left = arr[index].x + 'px';
+        oDiv1.style.top = arr[index].y + 'px';
+        index --;
+        if (index < 0 ) clearInterval(timer);
+    },30);
+
+    };
+
+    // document.onmousedown = function(ev){
+    oDiv1.onmousedown = function(ev){
+      // var x = ev.clientX;
+      // var y = ev.clientY;
+
+      document.onmousemove = function(ev){
+        var thisX = ev.clientX;
+        var thisY = ev.clientY;
+
+        oDiv1.style.left = thisX + 'px';
+        oDiv1.style.top = thisY + 'px';
+
+        arr.push({x:thisX, y: thisY});
+      };
+
+      document.onmouseup = function(){
+        document.onmousemove = null;
+        document.onmouseup = null;
+      };
+
+    };
+
+
+  
+  </script>
+
+</body>
+</html>

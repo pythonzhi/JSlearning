@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+var num = 1, timer;
+
+// 循环定时器：每隔一段时间，执行指定的代码
+function fn1(){
+  if (num == 10 ){
+    clearInterval(timer);
+  } 
+  console.log(num);
+  num ++;
+  
+}
+// fn1();
+// timer = setInterval(fn1, 1000); //ms为单位
+// 关闭循环定时器
+// clearInterval(timer); //定时器没有机会执行就直接被关了
+
+// 延迟定时器 ： 延迟一段时间之后，再执行指定的代码。
+function fn2(){
+  console.log('hello world');
+}
+// fn2();
+// setTimeout(fn2,2000);
+
+// 关闭延迟定时器
+// clearTimeout(延迟定时器的名称)
+
+
+</script>
+
+
+</body>
+</html>

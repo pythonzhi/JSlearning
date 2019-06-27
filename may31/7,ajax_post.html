@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<h2>ajax同源策略11</h2>  
+
+<script>
+
+/*
+get 方式提交
+
+  数据是通过url来传输的
+
+
+*/
+
+var user = '如花';
+var age = 18;
+
+var url = 'http://dabaojian.applinzi.com/data/getUser.php';
+
+// get方式提交数据
+// url = url + '?user=' + user + '&age=' + age;
+
+var data = 'user=' + user + '&age=' + age;
+
+console.log(data);
+// console.log(url);
+
+var xhr = new XMLHttpRequest();
+// xhr.open('get',url);
+xhr.open('post',url);
+
+xhr.onload = function(){
+  // console.log( xhr );
+  console.log( xhr.responseText );
+
+};
+
+// post方式提交，要设置http请求头来标识提交的数据类型
+xhr.setRequestHeader(
+  'Content-Type',
+  'application/x-www-form-urlencoded'
+);
+
+// xhr.send(null);
+xhr.send(data);
+
+</script>
+
+</body>
+</html>

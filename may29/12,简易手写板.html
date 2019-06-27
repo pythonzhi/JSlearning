@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      position: absolute;
+      width: 5px; 
+      height: 5px;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div></div> -->
+<script>
+
+document.onmousedown = function(){
+
+  document.onmousemove = function(ev){
+    var x = ev.clientX;
+    var y = ev.clientY;
+
+    var div = document.createElement('div');
+    div.style.left = x + 'px';
+    div.style.top = y + 'px';
+
+    document.body.appendChild(div);
+  };
+
+  document.onmouseup = function(){
+    document.onmousemove = document.onmouseup = null;
+  };
+
+};
+
+</script>
+
+</body>
+</html>

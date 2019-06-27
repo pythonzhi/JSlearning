@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+// 考察知识点： 作用域       涉及的知识点：作用域   函数传参
+
+// 情形一
+// var a = 10;
+// function fn1(){
+//   alert(a); //
+//   a = 20;
+// }
+// fn1();
+// alert(a); //
+
+
+// 情形二
+// var a = 10;
+// function fn1(){
+//   alert(a); //
+//   var a = 20;
+// }
+// fn1();
+// alert(a); //
+
+
+// 情形三
+// var a = 10;
+// function fn1(a){
+//   alert(a); //
+//   a = 20;
+// }
+// fn1();
+// alert(a); //
+
+
+// 情形四
+// var a = 10;
+// function fn1(a){
+//   alert(a); //
+//   a = 20;
+// }
+// fn1(a);
+// alert(a); //
+
+
+// 情形五
+var a = 10;
+function fn1(){
+  alert(a); //
+  a = 20;
+}
+fn1(a);
+alert(a); //
+
+
+</script>
+
+
+</body>
+</html>

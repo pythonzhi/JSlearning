@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+
+var oDate = new Date();
+
+// console.log(oDate);
+// console.log(oDate.getHours());
+// console.log(oDate.getDay()); //从0开始，0表示星期日
+// console.log(oDate.getDate())
+// console.log(oDate.getMonth()); //月份  从0开始
+// console.log(oDate.getYear()); //119  从1900年到现在经历了多少年
+// console.log(oDate.getFullYear()); //2019
+
+var iYear = oDate.getFullYear();
+var iMonth = oDate.getMonth();
+var iDate = oDate.getDate();
+var iHour = oDate.getHours();
+var iMin = oDate.getMinutes();
+var iSec = oDate.getSeconds();
+
+// document.body.innerHTML = '现在是北京时间：'+iYear+'年'+iMonth+'月'+iDate+'日 '+iHour+'点'+iMin+'分'+iSec+'秒'
+
+// setInterval(function(){
+//   var oDate = new Date();
+//   var iYear = oDate.getFullYear();
+//   var iMonth = oDate.getMonth();
+//   var iDate = oDate.getDate();
+//   var iHour = oDate.getHours();
+//   var iMin = oDate.getMinutes();
+//   var iSec = oDate.getSeconds();  
+//   document.body.innerHTML = '现在是北京时间：'+iYear+'年'+iMonth+'月'+iDate+'日 '+iHour+'点'+iMin+'分'+iSec+'秒'
+// },1000)
+
+var nDate = new Date(2019,5,7,0,0,0); //月份从0开始
+// var nDate = new Date('aug 1, 2018 9:30:00');
+// var nDate = new Date(12354934324221);
+// var nDate = new Date(0);
+// 时间戳： 从1970年1月1日开始到指定时间之间的毫秒数
+
+console.log(nDate);
+
+// 获取时间戳
+// console.log(oDate.getTime());
+
+setInterval(function(){
+  oDate = new Date();
+  nDate = new Date(2019,5,7);
+
+  var iTime = nDate - oDate; //未来时间 - 当前时间
+
+  // console.log(iTime); //距离端午节还剩余的毫秒数
+  var d = Math.floor(iTime / 86400000);
+  var h = Math.floor(iTime % 86400000 / 3600000);
+  var m = Math.floor(iTime % 86400000 % 3600000 / 60000);
+  var s = Math.floor(iTime/1000) % 60;
+
+  document.body.innerHTML = '距离端午节还有'+d+'天'+h+'时'+m+'分'+s+'秒'
+
+},1000);
+
+/*
+new Date() 不给任何参数，表示获取当前时间
+
+*/ 
+
+
+</script>
+
+</body>
+</html>

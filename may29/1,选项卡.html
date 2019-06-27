@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #tab {
+      width: 400px;
+      border: 5px solid #333;
+      margin: 50px auto 0;
+      background: #9cf;
+    }
+    #tab input {
+      width: 100px;
+      font-size: 24px;
+    }
+    #tab div {
+      height: 200px;
+      background: #eee;
+      display: none;
+    }
+    
+    #tab input.active {
+      background: red;
+      color:#fff;
+    }
+    #tab div.active {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <div id="tab">
+    <input type="button" value="选项一">
+    <input type="button" value="选项二" class="active">
+    <input type="button" value="选项三">
+    <div>内容一内容一内容一内容一</div>
+    <div class="active">内容二内容二内容二内容二内容二内容二</div>
+    <div>内容三内容三内容三内容三内容三</div>
+  </div>
+
+<script>
+
+// DOM操作 ： 获取元素
+
+// ES3的获取方式 
+// var oTab = document.getElementById('tab');
+// var aBtn = oTab.getElementsByTagName('input');
+// var aDiv = oTab.getElementsByTagName('div');
+
+// ES5的新方法获取元素
+var oTab = document.querySelector('#tab');
+var aBtn = document.querySelectorAll('#tab input');
+var aDiv = document.querySelectorAll('#tab div');
+// var num = 0;
+// aBtn[0].onclick = function(){
+//   this.className = 'active';
+//   aDiv[0].className = 'active';
+// };
+for (var i=0; i<aBtn.length; i++) {
+  aBtn[i].index = i;
+  aBtn[i].onclick = function(){
+    // 两层循环中的i变量之间不会有任何冲突
+    // 1,作用域限制   2，两个for循环并不是同时执行的
+
+    // 怎么知道被点击的input的下标是多少？
+    for (var i=0; i<aBtn.length; i++) {
+      aBtn[i].className = '';
+      aDiv[i].className = '';
+    }
+    this.className = 'active';
+    aDiv[this.index].className = 'active'
+    // alert(this.index);
+  }; 
+}
+// alert(123);
+
+
+</script>
+
+
+</body>
+</html>

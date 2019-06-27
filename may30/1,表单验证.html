@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<!-- action 指定表单提交的地址 -->
+<!-- <form action="https://www.baidu.com/s" method="GET">
+  <input type="text" name="abc">
+  <input type="submit" value="百度一下">
+</form> -->
+
+
+<form action="https://www.baidu.com/s" method="post" id="fm1">
+  <input type="text" name="user">
+  <input type="text" name="phone">
+  <input type="submit" value="提交">
+  <input type="reset" value="重置">
+</form>
+
+<script>
+var fm1 = document.getElementById('fm1');
+
+fm1.onsubmit = function(){
+
+  var user = this.user.value;
+
+  if (!user || !this.phone.value ){
+    alert('用户名或手机号不能为空！');
+    return false;
+  }
+
+  if (user.length < 3 || user.length > 16) {
+    alert('用户名不能少于2个字符或超过16个字符！');
+    return false;
+  }
+
+  // 阻止表单提交
+  // return false;
+
+  // 允许提交 （默认值）
+  // return true;
+};
+
+fm1.onreset = function(){
+  return confirm("确定要重置表单吗？");
+};
+
+// confirm()  确认警告框   点确定返回 true  点取消返回 false
+
+
+</script>
+
+<!-- 
+  表单：
+    action : 提交地址
+    method : 提交方式 
+    target : 在哪个窗口中进行提交
+        _blank 新窗口
+        _self
+        #name   指定的窗口名称
+
+
+  get 和 post 的区别
+
+    1, 数据传输方式不一样
+      get: 通过url传输数据
+      post: 通过浏览器后台传输
+
+    2，可以传输数据的类型不一样
+      get: 只能传输表单形式数据
+          key1=val1&key2=val2
+      
+      post: 除了可以传表单形式，还可以传输二进制数据
+          二进制数据：多媒体资源： 图片，视频等各种文件
+
+    3，可以提交的数据大小不一样
+      get： 受地址栏传值的限制
+        url的总长度是 1024kb 左右
+
+      post: 理论是没有限制，但实际是受服务器受配置限制。
+
+
+    method: 
+     get post     公共的，可以直接提交
+     input update  delete   需要服务器授权
+-->
+
+
+</body>
+</html>

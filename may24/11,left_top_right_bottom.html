@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background: grey;
+            position: relative;
+        }
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+            /* left: 0;
+            top: 0; */
+            /* right: -100px;
+            bottom: 50px; */
+
+            margin: auto;
+            /* 让元素在父级中水平垂直居中 */
+
+            left: 0; /* left优先级高于right */
+            top: 0; /* top优先级高于bottom */
+            right: 0;
+            bottom: 0;
+        }
+        .active {
+            left: auto; /* 重置left样式，让出控制权让right可以控制元素*/
+            top: auto;
+            right: 0;
+            bottom: 0;
+        }
+        /* 
+            left,top: 相对定位父级的左上角
+            right,bottom: 相对定位父级的右下角
+
+            document: 默认宽高就是浏览器窗口的宽高
+        */
+    </style>
+</head>
+<body>
+   
+    <div class="box">
+        <div class="div1"></div>
+    </div>
+
+</body>
+</html>

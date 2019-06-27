@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {margin: 0;}
+    #div1 {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: absolute;
+      left: 100px;
+      top: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="div1"></div>
+
+  
+<script>
+
+var oDiv = document.getElementById('div1');
+var iLeft = oDiv.offsetLeft; //到offsetParent左边的距离
+var speed = 5;
+// alert( iLeft );
+
+document.onkeydown = function(ev){
+
+  var ev = ev || event;
+
+  if (ev.keyCode == 39) {
+    iLeft += speed;
+    oDiv.style.left = iLeft + 'px';
+  }
+
+};
+
+</script>
+
+</body>
+</html>

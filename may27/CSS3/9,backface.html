@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  
+    body {
+      background: #333;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background: red;
+      font-size: 50px;
+      font-weight: bolder;
+      color: #fff;
+      margin: 200px auto 0;
+      transition: 1s;
+      /* 
+        transform-origin: 
+          设置变换的基点坐标
+
+        x: left  right center
+        y: top bottom  center
+      
+      */
+      /* 设置让背面看不到正面的内容 */
+      backface-visibility: hidden;
+    }
+    body:hover .box {
+      transform: rotateY(180deg);
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="box">hell world!</div>
+
+</body>
+</html>

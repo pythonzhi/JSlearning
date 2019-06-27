@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 50px auto 0;
+            border: 1px solid #ccc;
+            border-width: 0 5px;
+        }
+        .title {
+            float: left;
+            width: 100px;
+        }
+        .content {
+            float: left;
+            width: 200px;
+        }
+        li {
+            text-align: right;
+            padding-right: 15px;
+        }
+        .clearFix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        @media screen and (max-width: 500px) {
+            .title { 
+                float: none;
+                width: auto;
+            }
+            .title li {
+                text-align: left;
+            }
+            .content { 
+                float:  none;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearFix">
+        <div class="title">
+            <ul>
+                <li><a href="#">导航一</a></li>
+                <li><a href="#">导航二</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>雷曼affdlsajfljflal</p>
+            <p>雷曼affdlsajfljflal</p>
+        </div>
+    </div>
+</body>
+</html>

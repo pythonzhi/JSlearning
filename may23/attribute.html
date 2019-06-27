@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* [sn] {
+            border: 2px dotted blue;
+        } */
+
+        /* 选中有属性为class，并且值为abc的标签 */
+        /* [class='abc'] {
+            color: red;
+        } */
+
+        /* 选中属性名为sn，并且有一个属性值为abcd的标签 */
+        /* [sn~='abcd'] {
+            color: orange;
+        } */
+
+        /* 选中属性名为class，并且属性值的开头是ab的标签，ab可以是一个完整值，也可以是值的一部分 */
+        /* [class^='ab'] {
+            color: blue;
+        } */
+
+        /* 选中属性名为class，并且属性值的结尾是s的标签，s可以是一个完整值，也可以是值的一部分 */
+        /* [class$='s'] {
+            color: purple;
+        } */
+
+        /* 选中属性名为class，并且属性值中有ab字符串的标签 */
+        /* [class*='ab'] {
+            color: yellowgreen;
+        } */
+
+        /* [class|='abc'] {
+            color: tomato;
+        } */
+
+        /* 选中type类型为text的input标签 */
+        /* input[type='text'] {} */
+
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li sn>1111111</li>
+        <li class="abc focus">2222222</li>
+        <li class="abc">3333333</li>
+        <li class="cc abc-e dd">4444444</li>
+        <li class="focus ab current">5555555</li>
+        <li class="abc-e dd">6666666</li>
+        <li sn='efd abcd defg'>7777777</li>
+        <li>8888889</li>
+    </ul>
+
+</body>
+</html>

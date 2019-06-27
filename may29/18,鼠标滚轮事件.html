@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {height: 3000px;}
+  
+  </style>
+</head>
+<body>
+
+  <div></div>
+  
+<script>
+
+  var i = 0;
+
+// firefox下没有 mousewheel 事件
+// document.onmousewheel = function(){
+//   console.log('滚轮在滚动');
+//   document.title = '滚轮在滚动' + ++i;
+// };
+
+// // 在firefox下的鼠标滚轮事件
+// document.addEventListener('DOMMouseScroll',function(){
+//   console.log('滚轮在滚动');
+//   document.title = 'a滚轮在滚动' + ++i;
+// });
+
+document.onmousewheel = mouseScroll;
+document.addEventListener('DOMMouseScroll',mouseScroll);
+
+
+function mouseScroll(ev){
+  // console.log('滚轮在滚动');
+  // document.title = '滚轮在滚动' + ++i;
+  var ev = ev || window.event;
+  var bDown = true; //true 滚动条往下走 false 滚动条往上走
+
+  // console.log( ev );
+  // console.log(
+  //   ev.wheelDelta,
+  //   ev.detail
+  // );
+
+  if (ev.wheelDelta) {
+    bDown = ev.wheelDelta < 0;
+  } else {
+    bDown = ev.detail > 0;
+  }
+
+  // wheelDelta
+  // 负数： 滚动条往下走  正数 ： 滚动条往上走
+
+  // detail
+  // 负数： 滚动条往上走   正数 ： 滚动条往下走
+
+  if ( bDown ){
+    console.log('滚动条在往下走');
+  }else{
+    console.log('滚动条在往上走');
+  }
+
+}
+
+
+</script>
+
+</body>
+</html>

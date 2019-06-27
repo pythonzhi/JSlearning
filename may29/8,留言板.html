@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    input {margin: 0; padding: 0;}
+    .main {
+      width: 600px;
+      margin: 50px auto 0;
+      border: 1px solid #333;
+      box-shadow: #333 0px 5px 5px;
+      box-sizing: content-box;
+      padding: 10px;
+    }
+    #txt {
+      width: 100%;
+    }
+    #list li {
+      position: relative;
+    }
+    #list li a {
+      position: absolute;
+      right: 15px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="main">
+    <textarea id="txt"></textarea>
+    <input type="button" value="发布留言" id="btn" />
+    <ul id="list">
+      <li>这是一条留言<a href="javascript:;">删除</a></li>
+    </ul>
+  </div>
+
+  <script>
+    var oTxt = document.getElementById('txt');
+    var oBtn = document.getElementById('btn');
+    var oList = document.getElementById('list');
+    // var aBtn = oList.getElementsByTagName('a');
+  
+    oBtn.onclick = function(){
+
+      // 获取到留言的内容
+      var txt = oTxt.value;
+
+      // 如果内容为空，不允许点发布留言。
+      if (!txt.trim()) return;
+
+      // alert(txt);
+      // 创建 li 标签
+      var li = document.createElement('li');
+      li.innerHTML = txt + '<a href="javascript:;">删除</a>';
+
+      // 将创建的标签添加到页面中 添加到父级的最后
+      // oList.appendChild(li);
+
+      // 参数：  准备插入的新元素   插入到哪个元素的前面
+      oList.insertBefore(li, oList.firstChild);
+
+      // for (var i=0; i<aBtn.length; i++) {
+      //   aBtn[i].onclick = function(){
+      //     oList.removeChild(this.parentNode);
+      //   };
+      // }
+    };
+
+    // for (var i=0; i<aBtn.length; i++) {
+    //   aBtn[i].onclick = function(){
+    //     oList.removeChild(this.parentNode);
+    //   };
+    // }
+
+    // 事件代理 / 事件委托 : 利用的是事件冒泡机制实现的
+    oList.onclick = function(ev){
+      // console.log(ev);
+      if ( ev.target.nodeName == 'A' )
+        oList.removeChild(ev.target.parentNode);
+    };
+  
+  </script>
+
+</body>
+</html>

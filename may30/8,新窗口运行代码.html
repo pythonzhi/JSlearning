@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    iframe {width: 100%;}
+  </style>
+</head>
+<body>
+  
+<textarea id="code"></textarea>
+<input type="button" value="运行" id="btn">
+
+<script>
+
+var code = document.getElementById('code');
+var btn = document.getElementById('btn');
+
+btn.onclick = function(){
+  var newWin = window.open('');
+  var codeVal = code.value;
+
+  newWin.document.write(codeVal);
+  // 如果使用了 write() 或 writeln() 方法 ，最后
+  // 应该调用 close() 方法来关闭输入流
+  newWin.document.close();
+
+};
+
+// document.onclick = function(){
+  // open() 的返回值为打开的窗口 ， 是一个window对象
+  // var newWin = window.open('');
+
+  // 通过window对象往新窗口页面中添加内容 
+  // newWin.document.body.innerHTML = '这是通过上一个页面中的js写入的文本';
+  // newWin.document.write('<h2>这是一个标题</h2>');
+// };
+
+</script>
+
+</body>
+</html>

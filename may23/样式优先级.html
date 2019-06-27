@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="1.css"> -->
+    <style>
+       #div1 {
+           font-size: 60px;
+           color: red;
+           width: 100px;
+           height: 100px;
+           padding: 20px;
+           /* box-sizing: content-box; */
+           box-sizing: border-box;
+       }
+       .active {
+           color: orange;
+       }
+       div#div1 {
+           color: blue;
+       }
+       /*
+        !important: 提升指定属性的优先级到最高级
+        id       100
+        class    50
+        tagName  10
+        style    1000
+        !important   99999
+       */
+    </style>
+</head>
+<body>
+    <div id="div1" class="active">
+        这是一个div
+    </div>
+</body>
+</html>

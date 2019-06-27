@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 选中所有标签下面的第一个子标签 */
+        
+        /* 选中.box 下面的所有的在父级中是第一个子元素的标签 */
+        /* .box :nth-child(1) {
+            color: red;
+            font-size: 30px;
+        } */
+
+        /* 选中所有在父级标签中同类标签里是第一个子标签的标签 */
+        /* .box :nth-of-type(1) {
+            color: blue;
+            font-size: 50px;
+        } */
+
+        /* 选中.box下面的所有在父级中是第一个子标签并且有class为abc的标签 */
+        /* .box .abc:nth-child(1) {
+            color: red;
+            font-size: 30px;
+        } */
+
+        /* 2n 选中所有偶数标签 */
+        .list ul :nth-child(2n) {
+            background: pink;
+        }
+        .list ul :nth-child(2n+1) {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- container    title     main -->
+    
+    <section class="box">
+        <p class="abc">1111111</p>
+        <div>aaaaaaa</div>
+        <p class="abc">2222222</p>
+        <div>bbbbbb</div>
+        <p>3333333</p>
+        <p>4444444</p>
+        <ul>
+            <li>fsfdsafafasf</li>
+            <li>fdsaffasd</li>
+            <li>fdsafafas</li>
+            <li>fdsafdsfdaf</li>
+            <li>fdsafaf</li>
+            <li>fdsafaf
+                <ol>
+                    <li>fdsaf</li>
+                    <li>fdsaf</li>
+                    <li>fdsaf</li>
+                    <li>fdsaf</li>
+                    <li>fdsaf</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+
+    <section class="list">
+        <div>fd12423232313</div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+
+</body>
+</html>

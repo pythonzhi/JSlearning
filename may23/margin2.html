@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            background: #ccc;
+            /* border: 1px solid #000; */
+        }
+        #box::before {
+            content: "";
+            display: table;
+        }
+        #box div {
+            width: 300px;
+            height: 150px;
+        }
+        .div1 {
+            /* float:left; */
+            background: green;
+            /* margin-bottom: 100px; */
+            margin-top: 100px;
+        }
+        .div2 {
+            /* clear: both; */
+            /* float: left; */
+            background: pink;
+            /* margin-top: 170px; */
+        }
+        /* 
+            同级标签之间，上下的margin会重叠，值更大的生效
+            当两个标签都有浮动属性时，则不会重叠。
+        */
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="div1"></div>
+        <div class="div2"></div>
+    </div>
+</body>
+</html>

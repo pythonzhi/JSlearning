@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            left: 400px;
+            /* 调用关键帧动画 */
+            /* animation: move 3s linear infinite alternate; */
+            animation: move 1s infinite;
+        }
+        body:hover .box {
+            animation-play-state: paused;
+        }
+    
+
+        /* 设置关键帧动画形式 */
+        @keyframes move {
+            /* frome {
+                left: 0px;
+            }
+            to {
+                left: 500px;
+            } */
+            /* 0% {
+                left: 400px;
+            }
+            50% {
+                left: 0px
+            }
+            100% {
+                left: 800px;
+            } */
+            from {
+                left: 400px;
+            }
+            100% {
+                left: 800px;
+            }
+            /* to {
+                left: 400px;
+            } */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

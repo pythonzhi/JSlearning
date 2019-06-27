@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            /* width: 300px; */
+            background: #888;
+            margin: 0 auto;
+            /* float: left; */
+            /* border: 1px solid #888; */
+            overflow: hidden;
+            position: relative;
+        }
+        /* 
+        设置 width 或 overflow 可以触发浏览器的BFC机制
+        浏览器的渲染机制
+            BFC：block format content
+            IFC: inline format content
+         */
+        .box div {
+            width: 100px;
+            /* height: 100px; */
+            /* float:left; */
+            /* display: inline-block; */
+            /* margin: 0 20px; */
+        }
+        .div1,.div2 {
+            float: left;
+            height: 100px;
+        }
+        .div1 {
+            background: blue;
+        }
+        .div2 {
+            background: red;
+        }
+        .clear {
+            clear: both;
+            /* height: 20px; */
+            /* margin-top: 100px; */
+            _height: 0; _font-size:0;
+            overflow: hidden;
+            /* 
+                不符合规则使用规则
+                    不在页面中放空标签
+
+                不符合结构 样式  行为三者分离的编程思想
+            */
+        }
+
+        /* 低版本IE： hasLayOut */
+        .clearFix {*zoom:1;} /*针对ie9以下浏览器*/
+        .clearFix:after {
+            content: "";
+            clear: both;
+            display: table;
+           /* overflow: hidden; 为了解决低版本ie的兼容问题*/
+        }
+
+        .box .pop {
+            width: 200px;
+            height: 200px;
+            background: rgba(155,128,0,0.5);
+            position: absolute;
+            /* 绝对定位的元素默认层级比没有定位的元素高 */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <!-- <div class="clear"></div> -->
+        <!-- <br clear="all"> -->
+        <div class="pop"></div>
+    </div>
+
+</body>
+</html>

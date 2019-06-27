@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<h2>ajax同源策略11</h2>  
+
+<script>
+
+/*
+HTML : 数据展示
+XML  ：数据存储
+*/
+
+// ajax 不能进行跨域请求
+// XMLHttpRequest 2.0   可以由服务器配合进行跨域请求
+var xhr = new XMLHttpRequest();
+
+// xhr.open('get','books.php');
+// xhr.open('get','http://localhost/books.php');
+// xhr.open('get','http://127.0.0.1/books.php');
+xhr.open('get','http://dabaojian.applinzi.com/data/books.php');
+
+xhr.onload = function(){
+  // console.log( xhr );
+  // console.log( xhr.responseText );
+  var data = JSON.parse(xhr.responseText);
+
+  console.log(data);
+
+};
+
+xhr.send(null);
+
+// http://dabaojian.applinzi.com/data/books.php
+
+</script>
+
+</body>
+</html>

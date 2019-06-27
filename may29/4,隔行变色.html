@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+<ul id="ul1">
+  <li>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+  </li>
+  <li></li>
+  <li></li>
+  <li>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<script>
+
+var oUl = document.getElementById('ul1');
+var aLi = oUl.childNodes;
+var arrLi = [];
+
+// 筛选出所有元素节点
+for (var i=0; i<aLi.length; i++) {
+  if (aLi[i].nodeType == 1) arrLi.push(aLi[i]);
+}
+
+// console.log(aLi);
+for (var i=0; i<arrLi.length; i++) {
+  if ( i %2 == 0) {
+    arrLi[i].style.backgroundColor = 'orange';
+  } else {
+    arrLi[i].style.backgroundColor = 'pink';
+  }
+}
+
+/*
+  文本节点没有style属性
+*/
+
+/*
+
+nodeType : 查看节点类型
+
+nodeName : 查看节点名称
+  元素节点：标签名     文本节点： #text
+  注释节点： #comment   属性节点： 属性名称
+  document节点： #document
+
+*/ 
+
+</script>
+
+</body>
+</html>

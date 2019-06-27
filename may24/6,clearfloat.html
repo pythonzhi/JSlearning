@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            background: #888;
+            margin: 0 auto;
+        }
+        .box div {
+            width: 100px;
+            height: 100px;
+        }
+        .div1 {
+            background: blue;
+            /* float:left; */
+            float:right;
+        }
+        .div2 {
+            clear: both;
+            float: left;
+            background: red;
+        }
+        /* 
+        clear: left
+            同一行的所有同级元素都不能有float: left设置，如果有
+            则当前元素(设置了clear:left的元素)就自动另起一行显示。
+        
+        clear: right
+            同一行的所有同级元素都不能有float: right设置，如果有
+            则当前元素(设置了clear:right的元素)就自动另起一行显示。
+        
+        clear: both;
+            同一行的所有同级元素不允许设置任何浮动属性，否则当前
+            元素就自动另起一行显示。
+         */
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+    </div>
+
+</body>
+</html>

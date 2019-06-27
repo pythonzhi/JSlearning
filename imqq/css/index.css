@@ -1,0 +1,387 @@
+/* 
+    项目：imqq项目
+    作者：小智
+*/
+body,html,ul,li,h1,h2,h3,h4,p{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+body{
+    color: #333;
+    font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* 顶部导航start */
+.topbar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 900;
+}
+.top{
+    position: fixed;
+    height: 76px;
+    background: white;
+}
+.logo{
+    display: block;
+    float: left;
+    width: 106px;
+    overflow: hidden;
+    padding-top: 76px;
+    font-size: 0;
+    height: 0;
+    background: transparent url(../img/imlogo_b.png) no-repeat left 15px;
+}
+.nav{
+    min-width: 980px;
+    max-width: 1170px;
+    width: 80%;
+    height: 76px;
+    margin: 0 auto;
+}
+.nav .topside{
+    height: 100%;
+    width: 59%;
+    float: left;
+}
+.nav .topside .leftNav{
+    float: left;
+    width: 450px;
+    height: 100%;
+    padding-left: 18px;
+}
+.nav .leftNav li{
+    height: 100%;
+    margin-left: 20px;
+    float: left;
+}
+.nav .leftNav li a{
+    display: inline-block;
+    height: 100%;
+    line-height: 76px;
+    font-size: 1.125em;
+    padding: 0 20px;
+}
+.nav .leftNav li a:hover{
+    background-color:#12b7f5;
+    color: black;
+}
+.nav .toptool{
+    width: 320px;
+    font-size: 0.875em;
+    float: right;
+}
+.nav .toptool a.zhuce{
+    float: left;
+    width: 96px;
+    height: 39px;
+    font-size: 0;
+    margin-top: 18px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 39px;
+    background: url(../img/icons.png) no-repeat 0 -244px;
+}
+.nav .rightNav{
+    padding-top: 15px;
+    float: right;
+    height: 40px;
+}
+.nav .rightNav li{
+    float: right;
+    margin-left: 30px;
+    line-height: 40px;
+}
+/* 第一屏轮播图 */
+#banner{
+    height: 600px;
+    width: 100%;
+    background: red;
+}
+#banner ul{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    min-width: 1007px;
+}
+#banner ul li{
+    height: 100%;
+    width: 100%;
+}
+#banner ul li .tim_content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../img/pcqq_bg.jpg) no-repeat center center;
+}
+#banner ul li .tim_content .tim_content_title{
+    width: 576px;
+    height: 120px;
+    padding-top: 13%;
+    margin: 0 auto;
+}
+.tim_content .tim_content_title .titile_text{
+    float: left;
+    width: 328px;
+    height: 84px;
+    background: url(../img/title-text-1366s.png) no-repeat center top;
+}
+.tim_content .tim_content_title .title_btn{
+    float: left;
+    width: 248px;
+    height: 86px;
+    background: url(../img/title-button-s.png) no-repeat center top;
+}
+#banner ul li .tim_content img{
+    width: 100%;
+    height: auto;
+}
+#banner .lunbo_btn_wrap{
+    position: relative;
+    background: url(../img/linearbot.png);
+    width: 100%;
+    height: 52px;
+    margin-top: -52px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#banner .lunbo_btn_wrap .lunbo_btn{
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 7px 9px;
+    background: url(../img/nav.png) no-repeat center center;
+    cursor: pointer;
+}
+#banner .lunbo_btn_wrap .lunbo_btn.on{
+    background: url(../img/navcur.png) no-repeat center center;
+}
+.slogen{
+    width: 100%;
+    padding-top: 280px;
+    overflow: hidden;
+    height: 0;
+    background: url(../img/brand.png) no-repeat center top;
+}
+
+
+
+/* 三张大图部分 */
+.bg{
+    height: 600px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-attachment: fixed;
+}
+.firstbg{
+    background-image: url(../img/bg1_1600.jpg);
+    
+}
+.secondbg{
+    background-image: url(../img/avds.jpg);
+}
+.thirdbg{
+    background-image: url(../img/bg3_1600.jpg);
+}
+
+/* 三个图文混排 */
+.qcontent{
+    height: 584px;
+    width: 100%;
+    background: white;
+}
+.qwrap{
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+}
+.qtext{
+    float: right;
+    width: 487px;
+    padding-top: 115px;
+    padding-right: 7px;
+}
+.connect h2{
+    height: 0;
+    width: 100%;
+    padding-top: 135px;
+    overflow: hidden;
+    background: url(../img/qcall_txt.png) no-repeat right top;
+}
+.connect p{
+    font-size: 18px;
+    opacity: 0.6;
+    text-align: right;
+    line-height: 25px;
+    letter-spacing: 0.12em;
+    margin-bottom: 12px
+}
+.knmore{
+    color: #12b7f5;
+    font-size: 18px;
+    text-decoration: none;
+}
+.qtext ul{
+    width: 100%;
+    padding-top: 44px;
+    background: transparent url(../img/qcall_figs.png) no-repeat 190px 41px;
+    min-height: 77px;
+}
+.qtext ul li{
+    padding-top: 58px;
+    border-left: 1px solid #e9e9e9; 
+    float: right;
+    color: #a0a0a0;
+    text-align: center;
+    font-size: 14px;
+}
+.qtext ul li:nth-child(1){
+    width: 80px;
+    text-align: right;
+}
+.qtext ul li:nth-child(2){
+    width: 109px;
+}
+.qtext ul li:nth-child(3){
+    border: none;
+    width: 156px;
+}
+.connect .qimg{
+    position: absolute;
+    left: -32px;
+    bottom: 0;
+    width: 664px;
+    height: 763px;
+    background: url(../img/pic1.png) no-repeat left bottom;
+}
+.qfile .ltext{
+    position: absolute;
+    left: 7px;
+    top: 115px;
+    width: 450px;
+}
+.qfile .ltext h2{
+    height: 0;
+    width: 100%;
+    padding-top: 140px;
+    overflow: hidden;
+    background: transparent url(../img/txt.png) no-repeat left top;
+}
+.qfile .ltext p{
+    width: 90%;
+    padding-left: 5px;
+    margin-bottom: 12px;
+    line-height: 25px;
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    opacity: 0.6;
+}
+.qfile .ltext ul{
+    width: 100%;
+    padding-top: 44px;
+    background: transparent url(../img/qfile_figs.png) no-repeat 7px 41px;
+    min-height: 77px;
+}
+.qfile .ltext ul li{
+    float: left;
+    font-size: 14px;
+    color: #a0a0a0;
+    padding-top: 58px;
+    text-align: center;
+    border-right: 1px solid #e9e9e9;
+}
+.qfile .ltext ul li:nth-child(1){
+    text-align: left;
+    text-indent: 12px;
+    width: 94px;
+}
+.qfile .ltext ul li:nth-child(2){
+    width: 112px;
+}
+.qfile .ltext ul li:nth-child(3){
+    border: none;
+    width: 108px;
+}
+.qfile .rbg{
+    position: absolute;
+    right: -100px;
+    bottom: 104px;
+    background: transparent url(../img/pic2\ \(1\).png) no-repeat right top;
+    width: 597px;
+    height: 330px;
+}
+.qcontent .qblog h2{
+    background: url(../img/qblog_txt.png) no-repeat left top;
+}
+.qcontent .qblog ul{
+    background: url(../img/qblog_figs.png) no-repeat 221px 41px;
+}
+.qcontent .qblog ul li:nth-child(1){
+    width: 80px;
+}
+.qcontent .qblog ul li:nth-child(2){
+    width: 105px;
+}
+.qcontent .qblog ul li:nth-child(3){
+    width: 106px;
+}
+.qcontent .qblog .qimg{
+    position: absolute;
+    left: 88px;
+    bottom: 0;
+    width: 344px;
+    height: 506px;
+    background: url(../img/pic3.png) no-repeat left top;
+}
+.blogimg .blogwrap{
+    position: relative;
+    left: 0;
+    top: 217px;
+    width: 291px;
+    height: 150px;
+}
+.blogimg div{
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 150px;
+}
+.blogwrap div:hover{
+    transform: rotate(360deg);
+}
+.blogimg .pic1{
+    left: -122px;
+    background: transparent url(../img/qblog_fig1.png) no-repeat 0 0;
+}
+.blogimg .pic2{
+    left: 70px;
+    background: transparent url(../img/qblog_fig2.png) no-repeat 0 0;
+}
+.blogimg .pic3{
+    left: 260px;
+    background: transparent url(../img/qblog_fig3.png) no-repeat 0 0;
+}
+.blogimg .init{
+    left: 70px;
+}
+
+/* 页面底部设置 */
+footer{
+    height: 382px;
+    background: #666;
+}

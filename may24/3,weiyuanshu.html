@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 
+            在标签的内容之前添加指定的内容。 
+            实际是在页面中添加了一个默认 display属性为 inline
+            的特殊标签。
+
+            伪类与伪元素的区分：
+                会在页面中添加内容的为伪元素，只是给标签添加状态效果的为伪类
+
+        */
+        p:before {
+            /* content: "hello world!"; */
+            /* content: ""; */
+            color: red;
+            font-size: 30px;
+            background: orange;
+            display: block;
+        }
+        p:after {
+            content: "哈喽！";
+            color: purple;
+            font-size: 40px;
+            display: block;
+        }
+        input::placeholder {
+            color: red;
+        }
+        p::selection {
+            color: orange;
+            background: pink;
+        }
+
+        p::first-letter {
+            background: pink;
+            color: red;
+            backround: #888;
+            font-size: 80px;
+        }
+        p::first-line {
+            background: #ccc;
+        }
+
+        /* 
+            ::placeholder 与 ::selection 必须使用双冒号
+            ::before ::after
+            ::first-line  ::first-letter
+        */
+    </style>
+</head>
+<body>
+    
+    <p>纪念碑前的广场，铺设的大理石上镌刻有中国工农红军长征路线图。总书记低头细看：“赣县在这儿”“那里是湘江”“这边就到福建了”</p>
+
+    <input type="text" placeholder="请输入内容">
+
+</body>
+</html>

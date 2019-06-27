@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {margin:0;padding:0;}
+        .box {
+            width: 300px;
+            /* height: 100px; */
+            margin: 0 auto;
+            background: pink;
+        }
+        .box div {
+            width: 100px; height: 100px;
+        }
+        .div1,.div2 {
+            /* float: left; */
+            /* float: right; 会改变元素显示的顺序 */
+        }
+        .div1 {
+            background: orange;
+        }
+        .div2 {
+            background: green;
+        }
+        div.div3 {
+            width: 200px;
+            background: blue;
+            float: right;
+        }
+        /*
+            不好的地方：影响文档流的布局
+
+            浏览器渲染页面的方式
+                页面的回流 与 重绘
+
+            浮动元素因为脱离了文档流，所以会覆盖在没有浮动元素的上面
+            但是，不会将文字覆盖，而是文字将环绕在浮动元素周围
+            原则：同级元素，要么所有元素都浮动，要么都不浮动。
+        */
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+    </div>
+    <p>fdsfafalfjdslafjlajflflfafdsfafalfjdslafjlajflflfafdsfafalfjdslafjlajflflfa</p>
+
+</body>
+</html>

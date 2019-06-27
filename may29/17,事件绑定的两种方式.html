@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background: red;
+      margin: 50px auto 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="box" id="box"></div>
+
+  <script>
+  
+    var box = document.getElementById('box');
+
+    // var a = 10;
+    // a = 20;
+
+// 以 on.. 的方式绑定事件处理函数，每个事件同时只能绑定一个事件处理函数
+    // box.onclick = fn1;
+    // box.onclick = fn2;
+    // box.onclick = null; //解除事件绑定
+
+// 可以给同一个事件绑定多个事件处理函数
+// 事件处理函数的调用顺序是按绑定的顺序执行
+    // box.addEventListener('click', fn1);
+    // box.addEventListener('click', fn2);
+
+//  IE8及以下浏览器给同一个事件绑定多个事件处理函数的方法
+// 事件处理函数的调用顺序是按绑定的相反顺序执行
+    // box.attachEvent('onclick', fn1);
+    // box.attachEvent('onclick', fn2);
+
+// 解除通过 addEventListener() 方式绑定的事件处理函数
+    // box.removeEventListener('click', fn1);
+
+// IE8及以下浏览器解除绑定事件处理函数的方法
+    // box.detachEvent('onclick', fn2);
+
+
+// 判断不同浏览器的常规技巧：就看指定属性或方法在浏览器中支不支持
+
+// 访问对象中不存在的属性，会得到undefined
+    // alert( box.abcd ); //undefined
+
+    if (box.addEventListener) {
+      box.addEventListener('click', fn1);
+      box.addEventListener('click', fn2);
+    } else {
+      box.attachEvent('onclick', fn2);
+      box.attachEvent('onclick', fn1);
+    }
+
+    function fn1(){
+      alert('这是fn1函数');
+    }
+
+    function fn2(){
+      alert('这是fn2函数');
+    }
+  
+    // app开发部
+    // window.onscroll = function(){
+    //   //在页面右下角添加下载APP推广图
+    // }
+
+    // // 前端开发部
+    // window.onscroll = function(){
+    //   // 在页面右下角添加返回顶部按钮
+    // };
+
+  
+  </script>
+
+</body>
+</html>

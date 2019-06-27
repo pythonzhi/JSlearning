@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+<a href="javascript:fnClose();">关闭当前窗口</a>
+
+<script>
+
+function fnClose(){
+  window.close();
+}
+
+/*
+window.close() : 关闭当前窗口
+
+  在不同浏览器表现不统一
+    chrome : 可以直接关闭当前窗口
+    IE ： 会有一个确认提示框，点确定则关闭，点取消则不关闭
+    firefox : 只允许关闭由 window.open() 打开的页面
+
+*/ 
+
+</script>
+
+</body>
+</html>

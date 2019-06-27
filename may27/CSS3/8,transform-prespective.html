@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> 2D变换 </title>
+  <style>
+    body {
+      perspective: 500px;
+      perspective-origin: 0px 0px;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background: #ccc;
+      margin: 200px auto 0;
+      transform-style: preserve-3d;
+      /* transform: rotateX(30deg) rotateY(30deg); */
+      position: relative;
+    }
+    .box div {
+      width: 200px;
+      height: 200px;
+      font-size: 80px;
+      color: #fff;
+      font-weight: bolder;
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: center;
+      line-height: 200px;
+      /* transition: 1s; */
+    }
+    .box .div1 {
+      background: red;
+      transform: translateZ(100px);
+    }
+    .box .div2 {
+      background: blue;
+      transform: rotateY(180deg) translateZ(100px);
+    }
+    .box .div3 {
+      background: green;
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    .box .div4 {
+      background: orange;
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+    .box .div5 {
+      background: purple;
+      transform: rotateX(90deg) translateZ(100px);
+    }
+    .box .div6 {
+      background: pink;
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+    
+  </style>
+</head>
+<body>
+  
+  <div class="box">
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+    <div class="div5">5</div>
+    <div class="div6">6</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+<!-- <script src="js/a.js"></script> -->
+<!-- <script src="js/1.txt"></script> -->
+<!-- 
+  script标签会将任何通过src引入的文件中的内容加载到页面
+  并且将文本内容当作js代码进行解析。
+-->
+<script>
+
+var arr = ['abc',true,123];
+
+function getData(a){
+  // alert(a);
+  console.log(a);
+}
+
+</script>
+<!-- <script src="demo.php"></script> -->
+<script src="demo.php?callback=getData"></script>
+
+<script>
+
+console.log(arr);
+
+</script>
+
+
+</body>
+</html>

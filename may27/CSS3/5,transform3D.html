@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> 2D变换 </title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background: #ccc;
+      margin: 200px auto 0;
+      transform-style: preserve-3d;
+      transform: rotateX(30deg) rotateY(30deg);
+      position: relative;
+    }
+    .box div {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      /* transition: 1s; */
+    }
+    .box .div1 {
+      background: red;
+      transform: translateZ(100px);
+    }
+    .box .div2 {
+      background: blue;
+      transform: rotateY(180deg) translateZ(100px);
+    }
+    .box .div3 {
+      background: green;
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    .box .div4 {
+      background: orange;
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+    .box .div5 {
+      background: purple;
+      transform: rotateX(90deg) translateZ(100px);
+    }
+    .box .div6 {
+      background: pink;
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+    
+    /* 
+      通过css3的translate改变元素的位置 比通过position方式改变元素
+      位置，性能要好。
+      css3的tranform属性可以触发浏览器的硬件加速
+
+      通过transform触发硬件加速的方式
+        使用tranform的3D属性，比如
+        transform: rotate3d(0,0,0);
+    */
+
+    /* .div1:hover {
+      transform: translateZ(-150px);
+    } */
+  </style>
+</head>
+<body>
+  
+  <div class="box">
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+  </div>
+
+</body>
+</html>

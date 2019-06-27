@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+<ul id="ul1"><!--注释节点-->
+  <li>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+  </li>
+  <li></li>
+  <li></li>
+  <li>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<script>
+
+var oUl = document.getElementById('ul1');
+var aLi = oUl.children;
+
+for (var i=0; i<aLi.length; i++) {
+  if ( i %2 == 0) {
+    aLi[i].style.backgroundColor = 'orange';
+  } else {
+    aLi[i].style.backgroundColor = 'pink';
+  }
+}
+
+/*
+  文本节点没有style属性
+*/
+
+/*
+
+childNodes: 获取所有类型的子节点
+  DOM的标准属性
+
+children: 获取所有子元素节点
+  非标准属性(浏览器提供的属性)
+
+*/ 
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  xml文档编写规则：
+    1，所有标签必须闭合
+    2，开始标签和结束标签的大写必须保持一致
+
+  xml文档原则
+    1，所有的数据部分应该是标签的内容，而不是标签的属性值
+    2，所有属性应该只作为选择元素的辅助，而不是存储数据
+-->
+<books>
+  <book>
+    <name class='title'>JavaScript入门</name>
+    <price>88.80</price>
+    <publish>黄科学院</publish>
+  </book>
+  <book>
+    <name class='title'>python从入门到放弃</name>
+    <price>66.60</price>
+    <publish>量子科技</publish>
+  </book>
+  <!-- 不推荐的写法：不应该将数据放在属性中 -->
+  <!-- <book name='php艺术' price='9.9'></book> -->
+</books>
+

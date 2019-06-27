@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container > li {
+            border: 1px solid red;
+        }
+        /* 选中相邻的下一个兄弟标签 */
+        /* .focus + li {
+            color: blue;
+            font-weight: bolder;
+        } */
+        /* 选中.focus标签后面的所有兄弟标签 */
+        .focus ~ li {
+            color: purple;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <!-- 子元素  后代标签 -->
+    <ul class="container">
+        <li>
+            <h2>标题一</h2>
+            <ul>
+                <li>1111</li>
+                <li>1111</li>
+                <li class="focus">1111</li>
+                <li>1111</li>
+                <li>1111</li>
+            </ul>
+        </li>
+        <li>
+                <h2>标题一</h2>
+                <ul>
+                    <li>1111</li>
+                    <li>1111</li>
+                    <li>1111</li>
+                    <li>1111</li>
+                </ul>
+            </li>
+        </ul>
+
+
+</body>
+</html>

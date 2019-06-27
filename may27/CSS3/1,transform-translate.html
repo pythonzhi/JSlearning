@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> 2D变换 </title>
+  <style>
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background: red;
+      transform: translate(50px,100px);
+    }
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background: blue;
+    }
+    .moveDown {
+      /* transform: translateY(200px); */
+      transform: translate(50px,200px);
+      /* background-image: url(''); */
+    }
+    /*
+      transform:
+        1, 元素是不脱离文档流的
+        2，元素层级会比正常文档流中的元素层级高
+        3，相对于自己原来的位置进行偏移
+    
+    */
+  </style>
+</head>
+<body>
+  
+  <div class="box1 moveDown"></div>
+  <div class="box2"></div>
+
+</body>
+</html>

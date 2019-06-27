@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+var a;
+function fn1(){
+  alert(123);
+}
+
+/*
+JS代码执行：
+  1, 从上到下一行一行逐行读取，边读取，边执行。
+  2, 按script标签进行解析，当一个标签解析完成之后，才会继续解析下一个标签中的代码。
+
+
+预解析机制：
+  把所有的变量声明和函数定义提到当前作用域的最前面提前解析。
+*/
+
+// alert(a);
+
+a = 10;
+
+// fn1();
+
+
+
+
+setTimeout(function(){
+  alert(b);
+},500);
+// alert(b);
+
+</script>
+
+<script>
+var b;
+b = 20;
+
+alert(a);
+
+</script>
+
+
+  
+</body>
+</html>
